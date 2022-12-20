@@ -1,5 +1,4 @@
-A Travel app
-
+A Travel app whose authentication
 https://user-images.githubusercontent.com/90182231/208710543-b93c605f-e1e5-4aa0-88a3-ea884b86f543.mp4
 
 
