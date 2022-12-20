@@ -1,4 +1,4 @@
-A Travel app whose authentication is done through blockchain 
+A Travel app whose authentication is done through blockchain , which can be used via Metamask(chrome extension)
 
 
 https://user-images.githubusercontent.com/90182231/208710543-b93c605f-e1e5-4aa0-88a3-ea884b86f543.mp4
