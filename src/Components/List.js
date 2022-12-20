@@ -20,7 +20,7 @@ const List = ({ data, isLoading, child, filter }) => {
         ) : (
           <div
             className="ps-4 pe-4 p-2 pt-3"
-            style={{ maxWidth: "45rem", height: "100%", overflowY: "scroll" }}
+            style={{ maxWidth: "45rem", height: "100%", overflowY: "scroll",backgroundColor:'black' }}
           >
             {data?.map((el, index) => {
               const photo = el.photo ? el.photo : "";
