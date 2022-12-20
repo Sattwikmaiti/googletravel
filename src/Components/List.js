@@ -100,7 +100,7 @@ const Detail = ({ el, img, newaddress, child, refProp, index }) => {
               target="_blank"
               className="card-text fs-8 mt-1 m-0 "
             >
-              Visit WebSite
+            <h4>Website</h4>
             </a>
           </div>
           <div className="row align-items-center mt-1  m-0 ">
