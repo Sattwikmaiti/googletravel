@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MapList from "./MapList";
-import Loader from "../Assets/Loader";
+
 const List = ({ data, isLoading, child, filter }) => {
   const [elRef, setElRef] = useState([]);
 
@@ -12,11 +12,14 @@ const List = ({ data, isLoading, child, filter }) => {
   }, [data]);
 
   return (
-    <div>
+    <div> 
+    
       <MapList filter={filter} />
+     
+      
       <div className="" style={{ height: "75vh", overflowY: "hidden" }}>
         {isLoading ? (
-          <Loader />
+         <>loading..</>
         ) : (
           <div
             className="ps-4 pe-4 p-2 pt-3"

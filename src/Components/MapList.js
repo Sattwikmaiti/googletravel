@@ -1,22 +1,70 @@
 
-import React  from "react";
+import React,{useState}  from "react";
 import "../App.css";
-
+const key= "43daf4a270afb8b9584a5a4f98d364bd";
+const base="https://api.openweathermap.org/data/2.5/";
 const MainList = ({ filter }) => {
-  const {  setFilterDistance, setPlaceName } =
+  const [wet,setwet]=useState("");
+    const [city,setCity]=useState("")
 
-    filter;
+       
+    const getWeather= async ()=>
+    {
+            
+        const api_call=await fetch(`${base}weather?q=${city}&units=metric&APPID=${key}`)
+        
+        const data=await api_call.json()
+      setwet(data);
+      console.log(data)
+
+    }    
+
+  const {  setFilterDistance, setPlaceName } =filter;
 
   const submitHandler = (e) => {
     e.preventDefault();
-    setPlaceName(e.target[0].value);
+    getWeather();
+    setPlaceName(e.target[0].value); 
   };
   return (
+<>
+
+<div className="weather"style={{height:'auto',backgroundColor:'GrayText',color:'white'}} >  
+{wet!=="" ? <>
+  <div className="temp"
+  >
+
+ Temp:{wet.main.temp} celcius
+ <br />
+ Min -Temp: {wet.main.temp_min} celsius
+ <br />
+  MAx-Temp:{wet.main.temp_max} celsius
 
 
+  </div>
+ <div className="weathers">
+ Humidity{wet.main.humidity}%
+ <br />
+  Weather:{wet.weather[0].main}
+  <br />
+  Wind Speed:{wet.wind.speed}
+  <br />
+   Wind DEg:{wet.wind.deg}
+ </div>
+    <div className="sunrise">
+
+  Sunrise:  {new Date( parseInt(wet.sys.sunrise)*1000).toLocaleString()}
+  <br />
+  Sunset: {new Date( parseInt(wet.sys.sunset)*1000).toLocaleString()}
+    </div>
+
+
+</>:""}
+ 
+</div>
     <div className="p-2 pb-3 ps-4 pe-4 shadow">
 
-      
+       
       <div className="mt-2">
         <div >
           <h3>Type City or State Name for better Search</h3>
@@ -35,6 +83,7 @@ const MainList = ({ filter }) => {
             type="search"
             placeholder="Search ..."
             style={{ color: "grey" ,fontWeight:'bold'}}
+            onChange={((e)=>{setCity(e.target.value)})}
           />
         </form>
       </div>
@@ -64,6 +113,9 @@ const MainList = ({ filter }) => {
           
       </div>
     </div>
+
+
+    </>
   );
 };
 

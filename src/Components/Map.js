@@ -7,7 +7,7 @@ import GoogleMapReact from "google-map-react";
 import Place from "./Place";
 const Map = ({ setBounds, userLocation, data, setChild }) => {
   return (
-    <div className="w-100" style={{ height: "100vh" ,width:'100vw' }}>
+    <div className="w-100" style={{ height: "1000px" ,width:'100vw' }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY }}
         defaultCenter={userLocation}

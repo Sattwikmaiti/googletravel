@@ -4,7 +4,7 @@ import LocationOn from "@material-ui/icons/LocationOn";
 const Place = ({ el }) => {
   const photo = el.photo ? el.photo : "";
   const img = photo.images ? photo.images : "";
-
+       console.log(el)
   return (
     <>
       {img ? (

@@ -19,9 +19,9 @@ const App = () => {
     <Router>
       <Routes>
 
-        <Route path="/" element={<Log/>}></Route>
+       
 
-    
+      <Route path="/" element={<MapPage />}></Route>
 
         <Route path="/Map/:id" element={<MapPage />}></Route>
         
