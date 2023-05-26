@@ -1,6 +1,7 @@
 A Travel app whose authentication is done through blockchain , which can be used via Metamask(chrome extension)
 
-
+REACT_APP_API_KEY=AIzaSyB3dzlf9T6KzUtz9IokYoOiyevTaxNQQo8
+REACT_APP_CITY_KEY=4ac675b3eaeb419793610937a1083d91
 
 https://user-images.githubusercontent.com/90182231/208978817-16c424c9-586e-48b1-a92d-b3606a932bf7.mp4
 
